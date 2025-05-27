@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Приватные и публичные программы</title>
+ 
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    
+
+    
+    <style>
+       
+       body {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuZGV2L3N2Z2pzIiBpZD0iQmdlblB0dHJuU3ZnUm9vdFByZXZpZXciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJCZ2VuUHR0cm5MYXllcjEiPjxnIGlkPSJQYXR0ZXJuUm9vdENvbnRlbnQxIj48ZyBpZD0iQmdlblB0dHJuTGF5ZXIxYmFja2dyb3VuZCI+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgaWQ9IkJnZW5QdHRybkJhY2tncm91bmQxIiBjbGFzcz0iY29sb3JfMSBmaWxsX2NvbG9yXzEiIGZpbGw9IiNiMGIwYjAiPjwvcmVjdD48L2c+PC9nPjwvcGF0dGVybj48cGF0dGVybiB4PSIwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iNTIiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJCZ2VuUHR0cm5MYXllcjIiIHBhdHRlcm5UcmFuc2Zvcm09Im1hdHJpeCgxLjEsMCwwLDEuMSwwLDApIj48ZyBpZD0iUGF0dGVyblJvb3RDb250ZW50MiI+PGcgaWQ9IkJnZW5QdHRybkxheWVyMkVsZW1lbnQyIj48dXNlIHhsaW5rOmhyZWY9IiNCZ2VuUHR0cm5FbGVtZW50MiIgeD0iOS41NzcxODY1ODQ0NzI2NTYiIHk9Ii0zMy4zNDU3Nzc1MTE1OTY2OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzAsIC0xMykgc2NhbGUoMSkgdHJhbnNsYXRlKC0zMCwgMTMpIHJvdGF0ZSg0NSwgMzAsIC0xMykiPjwvdXNlPjx1c2UgeGxpbms6aHJlZj0iI0JnZW5QdHRybkVsZW1lbnQyIiB4PSItMjAuNDIyODEzNDE1NTI3MzQ0IiB5PSItMzMuMzQ1Nzc3NTExNTk2NjgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIC0xMykgc2NhbGUoMSkgdHJhbnNsYXRlKDAsIDEzKSByb3RhdGUoNDUsIDAsIC0xMykiPjwvdXNlPjx1c2UgeGxpbms6aHJlZj0iI0JnZW5QdHRybkVsZW1lbnQyIiB4PSItNS40MjI4MTM0MTU1MjczNDQiIHk9Ii03LjM0NTc3NzUxMTU5NjY4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNSwgMTMpIHNjYWxlKDEpIHRyYW5zbGF0ZSgtMTUsIC0xMykgcm90YXRlKDQ1LCAxNSwgMTMpIj48L3VzZT48dXNlIHhsaW5rOmhyZWY9IiNCZ2VuUHR0cm5FbGVtZW50MiIgeD0iLTM1LjQyMjgxMzQxNTUyNzM0NCIgeT0iLTcuMzQ1Nzc3NTExNTk2NjgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNSwgMTMpIHNjYWxlKDEpIHRyYW5zbGF0ZSgxNSwgLTEzKSByb3RhdGUoNDUsIC0xNSwgMTMpIj48L3VzZT48dXNlIHhsaW5rOmhyZWY9IiNCZ2VuUHR0cm5FbGVtZW50MiIgeD0iMjQuNTc3MTg2NTg0NDcyNjU2IiB5PSItNy4zNDU3Nzc1MTE1OTY2OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDUsIDEzKSBzY2FsZSgxKSB0cmFuc2xhdGUoLTQ1LCAtMTMpIHJvdGF0ZSg0NSwgNDUsIDEzKSI+PC91c2U+PHVzZSB4bGluazpocmVmPSIjQmdlblB0dHJuRWxlbWVudDIiIHg9IjkuNTc3MTg2NTg0NDcyNjU2IiB5PSIxOC42NTQyMjI0ODg0MDMzMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzAsIDM5KSBzY2FsZSgxKSB0cmFuc2xhdGUoLTMwLCAtMzkpIHJvdGF0ZSg0NSwgMzAsIDM5KSI+PC91c2U+PHVzZSB4bGluazpocmVmPSIjQmdlblB0dHJuRWxlbWVudDIiIHg9Ii0yMC40MjI4MTM0MTU1MjczNDQiIHk9IjE4LjY1NDIyMjQ4ODQwMzMyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAzOSkgc2NhbGUoMSkgdHJhbnNsYXRlKDAsIC0zOSkgcm90YXRlKDQ1LCAwLCAzOSkiPjwvdXNlPjx1c2UgeGxpbms6aHJlZj0iI0JnZW5QdHRybkVsZW1lbnQyIiB4PSItNS40MjI4MTM0MTU1MjczNDQiIHk9IjQ0LjY1NDIyMjQ4ODQwMzMyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNSwgNjUpIHNjYWxlKDEpIHRyYW5zbGF0ZSgtMTUsIC02NSkgcm90YXRlKDQ1LCAxNSwgNjUpIj48L3VzZT48dXNlIHhsaW5rOmhyZWY9IiNCZ2VuUHR0cm5FbGVtZW50MiIgeD0iLTUuNDIyODEzNDE1NTI3MzQ0IiB5PSI0NC42NTQyMjI0ODg0MDMzMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTUsIDY1KSBzY2FsZSgxKSB0cmFuc2xhdGUoLTE1LCAtNjUpIHJvdGF0ZSg0NSwgMTUsIDY1KSI+PC91c2U+PC9nPjwvZz48L3BhdHRlcm4+PHN5bWJvbCBpZD0iQmdlblB0dHJuRWxlbWVudDIiPjxnIGNsYXNzPSJjb2xvcl8zIGZpbGxfY29sb3JfMyIgZmlsbD0iIzdhN2E3YSI+PHBhdGggZD0iTTE4Ljc4MSw1Ljc3NTY0OTA3MDczOTc0NkwxMy43MDMsMTAuODUyNjc2MzkxNjAxNTYyTDE0LjQxMSwxMS41NTk3ODI5ODE4NzI1NTlDMTUuOTczLDEzLjEyMiwxNS45NzMsMTUuNjU0LDE0LjQxMSwxNy4yMTY2MzY2NTc3MTQ4NDRMMTMuODg3LDE3LjczOTg5Njc3NDI5MTk5MkwyMS4xOTksMjIuMzY0Mzc0MTYwNzY2NkMyMS45OTEsMjIuODU5LDIzLjAyMywyMi43NDYsMjMuNjgxLDIyLjA4ODYwMzk3MzM4ODY3MkwyNi40MzEsMTkuMzM3OTU3MzgyMjAyMTVMMjUuMDE3LDE3LjkyMzc0NDIwMTY2MDE1NkwyMi4yNjcsMjAuNjc0Mzg4ODg1NDk4MDQ3TDE2Ljg1NywxNy4yNDQ5MjI2Mzc5Mzk0NTNMMTYuODY0LDE3LjIzNzg1MDE4OTIwODk4NEMxNy45MzIsMTUuMjUxLDE3LjgwNSwxMi43OSwxNi40NjgsMTAuOTE2MzE2MDMyNDA5NjY4TDIwLjE5NSw3LjE4OTg2MzIwNDk1NjA1NUMyMS40ODIsNy43OTgsMjMuMDk0LDcuNDU5LDIzLjk4NSw2LjE0MzM0NDQwMjMxMzIzMkMyNC42NTcsNS4xNDYsMjQuNjQyLDMuNzg5LDIzLjk2NCwyLjc5ODcyODk0Mjg3MTA5MzhDMjIuODY4LDEuMjA4LDIwLjY2MSwxLjA2NiwxOS4zNiwyLjM2NzM5NDIwODkwODA4MUMxOC40NDEsMy4yODcsMTguMjU3LDQuNjU4LDE4Ljc4MSw1Ljc3NTY0OTA3MDczOTc0Nk0yMC43NzUsMy43ODE2MDc4NjYyODcyMzE0QzIxLjE2MywzLjM5MywyMS44LDMuMzkzLDIyLjE4OSwzLjc4MTYwNzg2NjI4NzIzMTRTMjIuNTc4LDQuODA3LDIyLjE4OSw1LjE5NTgyMTc2MjA4NDk2MVMyMS4xNjMsNS41ODUsMjAuNzc1LDUuMTk1ODIxNzYyMDg0OTYxUzIwLjM4Niw0LjE3LDIwLjc3NSwzLjc4MTYwNzg2NjI4NzIzMTRNMTMuNzAzLDE2LjUwOTUzMTAyMTExODE2NEMxNC44NzcsMTUuMzM2LDE0Ljg3NywxMy40NDEsMTMuNzAzLDEyLjI2Njg5MDUyNTgxNzg3MVMxMC42MzUsMTEuMDkzLDkuNDYxLDEyLjI2Njg5MDUyNTgxNzg3MVM4LjI4NywxNS4zMzYsOS40NjEsMTYuNTA5NTMxMDIxMTE4MTY0UzEyLjUzLDE3LjY4MywxMy43MDMsMTYuNTA5NTMxMDIxMTE4MTY0TTEwLjg3NSwxMy42ODExMDM3MDYzNTk4NjNDMTEuMjY0LDEzLjI5MiwxMS45LDEzLjI5MiwxMi4yODksMTMuNjgxMTAzNzA2MzU5ODYzUzEyLjY3OCwxNC43MDYsMTIuMjg5LDE1LjA5NTMxNjg4NjkwMTg1NVMxMS4yNjQsMTUuNDg0LDEwLjg3NSwxNS4wOTUzMTY4ODY5MDE4NTVTMTAuNDg2LDE0LjA3LDEwLjg3NSwxMy42ODExMDM3MDYzNTk4NjNaIiB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAsMCkiPjwvcGF0aD48cGF0aCBkPSJNMzYuODc3LDMxLjQzMDA4OTk1MDU2MTUyM0wzNS4wMTgsMjQuNDk0NzQzMzQ3MTY3OTdMMzQuMDUyLDI0Ljc1MzU2MTAxOTg5NzQ2QzMxLjkxOCwyNS4zMjYsMjkuNzI1LDI0LjA2LDI5LjE1MywyMS45MjUxMzQ2NTg4MTM0NzdMMjguOTYyLDIxLjIxMDM1MDAzNjYyMTA5NEwyMS4zMDEsMjUuMjMwMDQxNTAzOTA2MjVDMjAuNDc3LDI1LjY2OCwyMC4wNTgsMjYuNjE5LDIwLjI5OSwyNy41MTczNTQ5NjUyMDk5NkwyMS4zMDYsMzEuMjc0ODA1MDY4OTY5NzI3TDIzLjIzOCwzMC43NTcxNjc4MTYxNjIxMUwyMi4yMzEsMjYuOTk5NzE1ODA1MDUzNzFMMjcuOTA2LDI0LjAyOTgwMDQxNTAzOTA2MkwyNy45MDgsMjQuMDM5NDU5MjI4NTE1NjI1QzI5LjA5NSwyNS45NTgsMzEuMjksMjcuMDc4LDMzLjU4MSwyNi44NTcyOTk4MDQ2ODc1TDM0Ljk0NSwzMS45NDc3MjcyMDMzNjkxNEMzMy43NzUsMzIuNzU4LDMzLjI2MywzNC4zMjQsMzMuOTU2LDM1Ljc1MzMwMzUyNzgzMjAzQzM0LjQ4NCwzNi44MzQsMzUuNjY3LDM3LjUsMzYuODYzLDM3LjQwNzIzODAwNjU5MThDMzguNzg5LDM3LjI1NCw0MC4wMTUsMzUuNDE0LDM5LjUzOCwzMy42MzYzNjM5ODMxNTQzQzM5LjIwMiwzMi4zODEsMzguMTA2LDMxLjUzNiwzNi44NzcsMzEuNDMwMDg5OTUwNTYxNTIzTTM3LjYwNywzNC4xNTQwMDMxNDMzMTA1NUMzNy43NDksMzQuNjg1LDM3LjQzMSwzNS4yMzYsMzYuODk5LDM1LjM3ODc0NjAzMjcxNDg0NFMzNS44MTcsMzUuMjAzLDM1LjY3NSwzNC42NzE2Mzg0ODg3Njk1M1MzNS44NTEsMzMuNTg5LDM2LjM4MiwzMy40NDY4OTU1OTkzNjUyMzRTMzcuNDY0LDMzLjYyMywzNy42MDcsMzQuMTU0MDAzMTQzMzEwNTVNMzAuMTE5LDIxLjY2NjMxNTA3ODczNTM1QzMwLjU0OSwyMy4yNywzMi4xOSwyNC4yMTcsMzMuNzk0LDIzLjc4NzYzNTgwMzIyMjY1NlMzNi4zNDUsMjEuNzE3LDM1LjkxNSwyMC4xMTM0MDE0MTI5NjM4NjdTMzMuODQ0LDE3LjU2MiwzMi4yNDEsMTcuOTkyMDgwNjg4NDc2NTYyUzI5LjY5LDIwLjA2MywzMC4xMTksMjEuNjY2MzE1MDc4NzM1MzVNMzMuOTgzLDIwLjYzMTAzODY2NTc3MTQ4NEMzNC4xMjUsMjEuMTYyLDMzLjgwNywyMS43MTMsMzMuMjc2LDIxLjg1NTc4MzQ2MjUyNDQxNFMzMi4xOTQsMjEuNjgsMzIuMDUxLDIxLjE0ODY3NzgyNTkyNzczNFMzMi4yMjcsMjAuMDY2LDMyLjc1OCwxOS45MjM5MzMwMjkxNzQ4MDVTMzMuODQxLDIwLjEsMzMuOTgzLDIwLjYzMTAzODY2NTc3MTQ4NFoiIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMCwwKSI+PC9wYXRoPjxwYXRoIGQ9Ik01LjYxMSwzNC4yNzQ2NTA1NzM3MzA0N0wxMi41NDcsMzYuMTMyOTY4OTAyNTg3ODlMMTIuODA1LDM1LjE2NzA0NTU5MzI2MTcyQzEzLjM3NywzMy4wMzIsMTUuNTcsMzEuNzY3LDE3LjcwNCwzMi4zMzg2MTkyMzIxNzc3MzRMMTguNDE5LDMyLjUzMDE0MzczNzc5Mjk3TDE4Ljc2OCwyMy44ODU5NzI5NzY2ODQ1N0MxOC44MDEsMjIuOTUzLDE4LjE4NywyMi4xMTUsMTcuMjg5LDIxLjg3NDQzMTYxMDEwNzQyMkwxMy41MzEsMjAuODY3NjI0MjgyODM2OTE0TDEzLjAxMywyMi43OTk0NzY2MjM1MzUxNTZMMTYuNzcxLDIzLjgwNjI4MjA0MzQ1NzAzTDE2LjUwNiwzMC4yMDU2NjU1ODgzNzg5MDZMMTYuNDk2LDMwLjIwMzA3NzMxNjI4NDE4QzE0LjI0MSwzMC4yNzIsMTIuMTc0LDMxLjYxMiwxMS4yMTksMzMuNzA2Nzc1NjY1MjgzMkw2LjEyOSwzMi4zNDI3OTYzMjU2ODM1OTRDNi4wMTIsMzAuOTI0LDQuOTEyLDI5LjY5OCwzLjMyNywyOS41ODM3NDAyMzQzNzVDMi4xMjgsMjkuNSwwLjk1OSwzMC4xOTIsMC40NDIsMzEuMjc0NDE5Nzg0NTQ1OUMtMC4zODgsMzMuMDE5LDAuNTkyLDM1LDIuMzcsMzUuNDc2NjMxMTY0NTUwNzhDMy42MjUsMzUuODEzLDQuOTA1LDM1LjI4Niw1LjYxMSwzNC4yNzQ2NTA1NzM3MzA0N00yLjg4NywzMy41NDQ3ODA3MzEyMDExN0MyLjM1NiwzMy40MDIsMi4wMzgsMzIuODUxLDIuMTgsMzIuMzIwMDM0MDI3MDk5NjFTMi44NzQsMzEuNDcxLDMuNDA1LDMxLjYxMjkyNjQ4MzE1NDI5N1M0LjI1NCwzMi4zMDYsNC4xMTIsMzIuODM3NjczMTg3MjU1ODZTMy40MTksMzMuNjg3LDIuODg3LDMzLjU0NDc4MDczMTIwMTE3TTE3LjQ0NiwzMy4zMDQ1NDI1NDE1MDM5MDZDMTUuODQyLDMyLjg3NSwxNC4yMDEsMzMuODIyLDEzLjc3MSwzNS40MjU4NjUxNzMzMzk4NDRTMTQuMjg5LDM4LjY3LDE1Ljg5MywzOS4xMDAwOTc2NTYyNVMxOS4xMzcsMzguNTgyLDE5LjU2NywzNi45Nzg3NzUwMjQ0MTQwNlMxOS4wNDksMzMuNzM0LDE3LjQ0NiwzMy4zMDQ1NDI1NDE1MDM5MDZNMTYuNDEsMzcuMTY4MjQ3MjIyOTAwMzlDMTUuODc5LDM3LjAyNiwxNS41NjEsMzYuNDc1LDE1LjcwMywzNS45NDM1MDA1MTg3OTg4M1MxNi4zOTcsMzUuMDk0LDE2LjkyOCwzNS4yMzYzOTI5NzQ4NTM1MTZTMTcuNzc3LDM1LjkzLDE3LjYzNSwzNi40NjExMzk2Nzg5NTUwOFMxNi45NDIsMzcuMzExLDE2LjQxLDM3LjE2ODI0NzIyMjkwMDM5WiIgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLDApIj48L3BhdGg+PC9nPjwvc3ltYm9sPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBpZD0iQmdlblB0dHJuUmN0TGF5ZXIxIiBmaWxsPSJ1cmwoJnF1b3Q7I0JnZW5QdHRybkxheWVyMSZxdW90OykiPjwvcmVjdD48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBpZD0iQmdlblB0dHJuUmN0TGF5ZXIyIiBmaWxsPSJ1cmwoJnF1b3Q7I0JnZW5QdHRybkxheWVyMiZxdW90OykiPjwvcmVjdD48L3N2Zz4=');
+    background-color: #f4f4f4;
+    color: #333333;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+}
+
+strong {
+    font-family: 'Caveat', cursive;
+}
+
+article {
+    border: 2px solid #cccccc;
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <article>
+            <h1>Приватные и публичные программы</h1>
+            <h2>Приватные программы</h2>
+            <p><em>Приватными программами</em> я называю те, которые будут использоваться только вами (их
+                разработчиками) или очень ограниченным кругом других людей, чьи навыки, требования и компьютеры хорошо
+                известны.</p>
+            <h2>Публичные программы</h2>
+            <p><em>Публичные программы</em> — прямая противоположность приватным. Они распространяются среди большого
+                числа людей.</p>
+            <p><strong>Лу Гринзоу</strong></p>
+        </article>
+        
+        <article>
+            <h1>Великая теорема Ферма</h1>
+            <p><b>Великая теорема Ферма́</b> (или <b>последняя теорема Ферма</b>)&nbsp;— одна из самых популярных теорем
+                математики. Сформулирована французским математиком Пьером Ферма в 1637 году. Несмотря на простоту
+                формулировки, буквально, на <q>школьном</q> арифметическом уровне, доказательство теоремы искали многие
+                математики на протяжении более трёхсот лет. И только в 1994 году теорема была доказана английским
+                математиком Эндрю Уайлсом с коллегами; публикация доказательства состоялась в 1995 году.
+            </p>
+            <h2>Формулировка</h2>
+            <p>Теорема утверждает, что для любого натурального числа \(n&gt;2\) уравнение
+                \[a^n + b^n = c^n\]
+                не имеет решений в целых ненулевых числах \(a, b, c.\)
+            </p>
+        </article>
+    </div>
+</body>
+
+</html>
