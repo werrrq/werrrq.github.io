@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации пользователя</title>
+    <style>
+        label {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма регистрации пользователя</h1>
+    <form action="#" method="POST"> 
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Введите e-mail" required><br><br>
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" placeholder="Введите пароль" required><br><br>
+
+        <label>Пол</label><br>
+        <label><input type="radio" name="gender" value="male" required> Мужчина</label>
+        <label><input type="radio" name="gender" value="female"> Женщина</label><br><br>
+
+        <label for="birthYear">Год рождения</label>
+        <select id="birthYear" name="birthYear">
+            <option value="">-выберите-</option>
+
+            <option value="1981">1981</option>
+
+        </select><br><br>
+
+        <label>Я знаю</label><br>
+        <label><input type="checkbox" name="language" value="russian" checked disabled> Русский</label>
+        <label><input type="checkbox" name="language" value="spanish"> Испанский</label>
+        <label><input type="checkbox" name="language" value="german"> Немецкий</label>
+        <label><input type="checkbox" name="language" value="english"> Английский</label>
+        <label><input type="checkbox" name="language" value="chinese"> Китайский</label><br><br>
+
+        <label for="aboutMe">Обо мне</label><br>
+        <textarea id="aboutMe" name="aboutMe" placeholder="Обо мне"></textarea><br><br>
+
+        <input type="submit" value="Готово">
+        <input type="reset" value="Очистить">
+    </form>
+</body>
+</html>
