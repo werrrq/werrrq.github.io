@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сайт-визитка</title>
+  <!-- Подключение Bootstrap 5 через CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Верхняя шапка */
+    header {
+      background: #007bff;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    /* Нижняя часть шапки */
+    #header-bottom {
+      background: #e9ecef;
+      padding: 10px 0;
+      text-align: center;
+    }
+    /* Блок об услугах компании */
+    #main {
+      padding: 20px 0;
+    }
+    /* Блок с методами компании */
+    #method {
+      padding: 20px 0;
+      background: #f1f1f1;
+    }
+    /* Блок с портфолио компании */
+    #work {
+      padding: 20px 0;
+    }
+    /* Подвал */
+    footer {
+      background: #343a40;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    /* Класс для одинакового размера изображений */
+    .img-same {
+      width: 300px;      /* или иные значения, сохраняя пропорцию 3:4 */
+      height: 400px;
+      object-fit: cover; /* изображение будет обрезаться для заполнения заданного размера */
+    }
+  </style>
+</head>
+<body>
+  <!-- Основной контейнер -->
+  <div class="container">
+    <!-- Шапка сайта -->
+    <header>
+      <h1>Добро пожаловать в мой блог</h1>
+      <p>Откройте для себя мои увлечения и достижения</p>
+      <!-- Навигационная шапка -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-menu" aria-controls="bs-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="bs-menu">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#main">О себе</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#method">Увлечения</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#work">Достижения</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="padding-top:8px; padding-bottom:8px;">
+                  <span class="btn btn-danger"><strong>Связь со мной</strong></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Нижняя часть "шапки" сайта -->
+    <div id="header-bottom">
+      <p>Здесь вы можете узнать немного больше обо мне</p>
+    </div>
+    <!-- Блок об услугах компании -->
+    <div id="main">
+      <div class="row text-center">
+        <h2>Борисов Александр Сергеевич</h2>
+        <p class="lead"></p>
+        <hr>
+        <div class="col-md-4">
+          <h3>Увлечения</h3>
+          <p>Я разносторонний человек, который в жизни попробовал себя во многом, но одно из главных увлечений — это волейбол.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Достижения</h3>
+          <p>Участия в соревнованиях, написание научных статей, волонтёрство.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Планы</h3>
+          <p>Сейчас я стараюсь изучать языки программирования и иностранные языки, чтобы путешествовать и познавать мир.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Блок, содержащий информацию об основных методах компании -->
+    <div id="method">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Краткая биография</h2>
+          <p>Меня зовут Борисов Александр, я студент 2-го курса ОГУ по специальности «Прикладная информатика». Учусь на «хорошо-отлично», участвую в научных конференциях и пишу статьи, развиваю навыки в Excel и Python. В свободное время занимаюсь волонтёрством и играю в волейбол за университетскую команду. В будущем хочу построить карьеру в сфере дата сайнс.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Блок, содержащий портфолио компании -->
+    <div id="work">
+      <div class="row text-center" style="background:#f35e59; color:#fff; padding:20px 0;">
+        <h2>Сферы деятельности</h2>
+        <p class="lead">Сфера деятельности включает учёбу, науку, работу, волонтёрство, творчество, спорт, общественную деятельность, предпринимательство и изучение языков.</p>
+        <hr>
+        <div class="col-md-4">
+          <img src="img1/iam.jpg" alt="Проект 1" class="img-fluid img-same">
+          <h4>Обучение</h4>
+          <p>Учёба очень важна, но не всегда интересна, и всё-таки приходится перебарывать себя и разбираться: если тема для меня интересна, то я готов тратить усилия.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="img1/pervie.jpg" alt="Проект 2" class="img-fluid img-same">
+          <h4>Активизм</h4>
+          <p>«Движение первых», юнармия — организации, которые помогли мне проявить себя, завести новые знакомства и научиться работать в команде.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="img1/voleybool.jpg" alt="Проект 3" class="img-fluid img-same">
+          <h4>Волейбол</h4>
+          <p>Спорт — неотъемлемая часть моей жизни: командные игры не только интересны, но и полезны для здоровья, а участие в соревнованиях позволяет сразиться с достойными соперниками.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Подвал сайта -->
+  <footer>
+    <p>&copy; 2025. Все права защищены.</p>
+  </footer>
+  
+  <!-- Подключение Bootstrap JS (Bootstrap 5) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
