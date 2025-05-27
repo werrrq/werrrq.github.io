@@ -2,47 +2,56 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Цвет ссылок</title>
+  <title>Атрибут target</title>
 </head>
 <body>
-<h1>Цвет ссылок</h1>
-<p>Цвета ссылок задаются в качестве атрибутов тега <code>&lt;body&gt;</code>. 
- Атрибуты являются необязательными и если они не указаны используются 
-  значения по умолчанию.</p>
-<p><code>link</code> &#8212; определяет цвет ссылок на веб-странице 
-  (цвет по умолчанию синий, #0000FF).</p>
+<h2>Атрибут target</h2>
+<p>По умолчанию, при переходе по ссылке документ открывается в текущем окне или 
+  фрейме. При необходимости, это условие может быть изменено атрибутом <code>target</code> 
+  тега <code>&lt;a&gt;</code>. Этот атрибут может принимать следующие 
+значения:</p>
+<p><code>_blank</code> &#8212; загружает страницу в новую вкладку или новое окно браузера (это зависит от настроек браузера);  </p>
 
-<p><code>alink</code> &#8212; цвет активной ссылки. Цвет ссылки 
-  меняется при нажатии на ней кнопки мыши. Цвет по умолчанию красный, 
-  #FF0000.  </p>
-<p><code>vlink</code> &#8212; цвет уже посещенных ссылок. Цвет 
-  по умолчанию фиолетовый, #800080.</p>
-<p>В HTML цвета задаются обычно цифрами в шестнадцатеричном коде, в виде <code>#rrggbb</code>, 
-  где r, g и b обозначают соответственно красную, зеленую и синюю составляющую. 
-  Для каждого цвета задается шестнадцатеричное значение от 00 до FF, что соответствует 
-  диапазону от 0 до 255 в десятичном исчислении. Затем эти значения объединяются 
-  в одно число, перед которым ставится символ # (пример&nbsp;1).</p>
+<p><code>_self</code> &#8212; загружает страницу в текущее окно;</p>
+<p> <code>_parent</code> &#8212; загружает страницу во фрейм-родитель;</p>
+<p> <code>_top</code> &#8212; отменяет все фреймы и загружает страницу в полном 
+  окне браузера.</p>
+<p>Вместе с атрибутом <code>target=&quot;_blank&quot;</code> обязательно используйте <code>rel=&quot;noopener noreferrer&quot;</code>, чтобы в момент открытия внешние сайты не узнали лишнего про текущую страницу.</p>
 
-<p>Пример 1. Задание цветов ссылок</p>
-
-<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
- &lt;html&gt;
-  &lt;head&gt;
-  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-
-  &lt;title&gt;Цвет ссылок&lt;/title&gt;
+<p>В примере 3 показано создание ссылки на сайт, который открывается в новом окне.</p>
+<p>Пример 3. Открытие документа в новом окне</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Новое окно&lt;/title&gt;
  &lt;/head&gt;
- &lt;body link=&quot;red&quot; vlink=&quot;#cecece&quot; alink=&quot;#ff0000&quot; bgcolor=&quot;black&quot;&gt;
-
-  &lt;p&gt;&lt;a href=&quot;content.html&quot;&gt;Содержание сайта&lt;/a&gt;&lt;/p&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href=&quot;https://webref.ru&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Ссылка открывает новое окно на сайт webref.ru&lt;/a&gt;&lt;/p&gt; 
  &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<p>Цвет не обязательно задавать в шестнадцатеричном формате, можно использовать 
-  и ключевые слова. В данном примере цвет фона веб-страницы установлен черным, 
-  а цвет ссылок&nbsp;&#8212; красным. </p>
+<p>Если на веб-странице необходимо сделать, чтобы все ссылки открывались в новом 
+  окне,  нет необходимости добавлять во все теги <code>&lt;a&gt;</code> <code>target=&quot;_blank&quot;</code>. Код можно сократить, 
+  если вначале страницы добавить строку <code>&lt;base target=&quot;_blank&quot;&gt;</code>, 
+  как показано в примере&nbsp;4</p>
 
+  
+<p>Пример 4. Использование тега &lt;base&gt;</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Открытие файла во фрейме&lt;/title&gt;
+  &lt;base target=&quot;_blank&quot;&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href=&quot;1.html&quot;&gt;Ссылка откроется в новом окне&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;2.html&quot; target=&quot;_self&quot;&gt;Ссылка откроется в текущем окне&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
-
+<p>Сделать так, чтобы ссылка открывалась в текущем окне, в таком случае можно, 
+  если добавить к тегу <code>&lt;a&gt;</code> атрибут <code>target=&quot;_self&quot;</code>.</p>
 </body>
 </html>
