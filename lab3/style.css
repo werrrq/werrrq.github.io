@@ -1,23 +1,46 @@
 body {
-    background-color: black;
-    color: white;
-    font-size: 1.5rem;
-    line-height: 2rem;
+	background-color: #ffffff;
+	color: #333333;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 0;
+	padding: 0;
+	background-image: url('gray-texture.jpg');
+	background-repeat: repeat;
 }
-
-
-p {
-    text-align: right;
-}
-
 
 h1, h2 {
-    text-align: right;
-    font-family: Arial, sans-serif;
-    color: red;
+	text-align: right;
+	font-family: 'Roboto', sans-serif;
+	color: #d32f2f;
+	margin: 1rem 0; 
 }
 
-
 em {
-    color: green;
+	color: green;
+}
+
+strong {
+	font-family: 'Caveat', cursive;
+}
+
+.wrapper {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+article {
+	border: 2px solid #cccccc;
+	border-radius: 15px;
+	margin: 20px 0;
+	padding: 20px;
+	background-color: #f9f9f9;
+}
+
+p {
+	text-align: right;
+	margin: 1rem 0;
 }
