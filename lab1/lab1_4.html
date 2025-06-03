@@ -1,52 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<title>Изображения</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Атрибуты элемента img</title> 
+    <style>
+        .image-container {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        figcaption {
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-	<section class="center">
-		<h1>Изображения</h1>
+    <section> 
+        <h1>Изображения</h1>
 
-		<h2>Элементы <code>img</code></h2>
+        <h2>Элемент <code>img</code></h2>
+        <p>Элемент <code>img</code> внедряет изображение в текущий документ в месте определения элемента. Элемент <code>img</code> не имеет содержимого — он замещается на ходу изображением, указанным в атрибуте <code>src</code>.</p>
 
-		<figure>
-			<img src="square_1280_6bab20e6f097e07a2b1b410b55cdc4a8.jpg" width="300" height="200" alt="МЕМ">
-			<figcaption>Мем</figcaption>
-		</figure>
-       
-		<p>Элемент <code>img</code> внедряет изображение в текущий документ в месте определения элемента. Элемент <code>img</code> не имеет содержимого — он замещается на ходу изображением, указанным в атрибуте <code>src</code>.</p>
+        <div class="image-container">
+            <h3>Атрибут <code>src</code></h3>
+            <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/aquaria.jpg" alt="Пример использования атрибута src">
+            <p><strong>Описание:</strong> Атрибут <code>src</code> указывает URL-адрес изображения, которое будет отображаться. В данном случае используется изображение `aquaria.jpg`.</p>
+        </div>
 
-		<h2>Альтернативный текст</h2>
-		<p>Атрибут <code>alt</code> предоставляет краткое описание изображения. Он содержит альтернативный текст, который отображается, если изображение не может быть выведено. Пользовательские агенты должны отображать альтернативный текст, если они не поддерживают изображения, или сконфигурированы так, чтобы не показывать изображения (отключен показ изображений).</p>
+        <h2>Альтернативный текст</h2>
+        <p>Атрибут <code>alt</code> предоставляет краткое описание изображения. Он содержит альтернативный текст, который отображается, если изображение не может быть выведено. Пользовательские агенты должны отображать альтернативный текст, если они не поддерживают изображения, или сконфигурированы так, чтобы не показывать изображения (отключен показ изображений).</p>
 
-		<h2>Размеры изображения</h2>
-		<p>Атрибуты <code>width</code> и <code>height</code> задают размеры области изображения. Если оба атрибута не заданы, размер изображения будет определен после его полной загрузки, после чего размеры области будут изменены для размещения содержания картинки.
-		Если задан только один из атрибутов, второй размер будет высчитан в соответствие с пропорциями изображения и заданным атрибутом.
-		При указании обоих атрибутов ПА «впишет» изображение в область с указанными размерами.</p>
-		<p>Для добавления гибких (responsive) изображений (таких, 
-		которые отображаются хорошо на устройствах с сильно отличающимися размерами экрана, разрешением, и другими характеристиками)
-		используют атрибуты <code>sizes</code> и  <code>srcset</code>.
-		Атрибут <code>sizes</code> задаёт размеры изображения для разных макетов страницы. 
-		Атрибут <code>srcset</code> задаёт путь к графическим файлам с учётом размера изображения и устройств.
+        <div class="image-container">
+            <h3>Атрибут <code>alt</code></h3>
+            <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/nonexistent.jpg" alt="Альтернативный текст, отображаемый при ошибке загрузки изображения">
+            <p><strong>Описание:</strong> Атрибут <code>alt</code> предоставляет альтернативное текстовое описание изображения.</p>
+            <p>В данном случае файл `lab1/image/nonexistent.jpg` отсутствует, поэтому отображается альтернативный текст.</p>
+        </div>
 
-		</p>
+        <h2>Размеры изображения</h2>
+        <p>Атрибуты <code>width</code> и <code>height</code> задают размеры области изображения. Если оба атрибута не заданы, размер изображения будет определен после его полной загрузки, после чего размеры области будут изменены для размещения содержания картинки.
+        Если задан только один из атрибутов, второй размер будет высчитан в соответствие с пропорциями изображения и заданным атрибутом.
+        При указании обоих атрибутов браузер «впишет» изображение в область с указанными размерами.</p> 
+        <div class="image-container">
+            <h3>Атрибуты <code>width</code> и <code>height</code></h3>
+            <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom.jpg" alt="Изображение с указанными width и height" width="200" height="150">
+            <p><strong>Описание:</strong> Атрибуты <code>width</code> и <code>height</code> определяют размеры отображаемой области изображения. Используется `mushroom.jpg`.</p>
+             <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom.jpg" alt="Оригинальный размер изображения">
+            <p><strong>Описание:</strong> Изображение в оригинальном размере (mushroom.jpg).</p>
+        </div>
 
-		<h2>Подпись к изображению</h2>
-		<p>Для группирования любых элементов, например, изображений и подписей к ним используется элемент <code>figure</code>.
-		Он не должен быть связан непосредственно с основным содержимым документа и при его перемещении в другое место смысл текста не должен меняться. 
-		Обычно применяется для иллюстраций, фрагментов кода, схем, графиков, диаграмм и др.
-		Элемент <code>figcaption</code> содержит описание для элемента <code>figure</code>. Он должен быть первым или последним элементом в группе.</p>
+        <p>Для добавления гибких (responsive) изображений (таких,
+        которые отображаются хорошо на устройствах с сильно отличающимися размерами экрана, разрешением, и другими характеристиками)
+        используют атрибуты <code>sizes</code> и  <code>srcset</code>.
+        Атрибут <code>sizes</code> задаёт размеры изображения для разных макетов страницы.
+        Атрибут <code>srcset</code> задаёт путь к графическим файлам с учётом размера изображения и устройств.
+        </p>
 
-		<h2>Элемент picture</h2>
-		<p>
-		HTML-элемент <code>picture</code> служит контейнером для одного или более элементов 
-		<code>source</code> и одного элемента <code>img</code> для обеспечения оптимальной версии изображения 
-		для различных размеров экрана. Браузер рассмотрит каждый из дочерних элементов  <code>source</code> 
-		и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов <code>source</code> 
-		найдено не будет, то будет выбран файл, указанный  атрибутом  <code>src</code> элемента <code>img</code>. 
-		Затем выбранное изображение отображается в пространстве, занятом элементом <code>img</code>. 
-		</p>
-	</section>
+        <div class="image-container">
+            <h3>Атрибуты <code>srcset</code> и <code>sizes</code></h3>
+            <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom.jpg"
+                 alt="Responsive image"
+                 srcset="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom_portrait.jpg 320w,
+                         https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom.jpg 768w,
+                         https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom_landscape.jpg 1200w"
+                 sizes="(max-width: 320px) 320px,
+                        (max-width: 768px) 768px,
+                        1200px">
+            <p><strong>Описание:</strong> Атрибут <code>srcset</code> задает разные версии изображения для разных разрешений экрана, а <code>sizes</code> указывает браузеру, какую версию использовать в зависимости от размера экрана.  Используются `mushroom_portrait.jpg`, `mushroom.jpg` и `mushroom_landscape.jpg`.</p>
+        </div>
+
+        <h2>Подпись к изображению</h2>
+        <p>Для группирования любых элементов, например, изображений и подписей к ним используется элемент <code>figure</code>.
+        Он не должен быть связан непосредственно с основным содержимым документа и при его перемещении в другое место смысл текста не должен меняться.
+        Обычно применяется для иллюстраций, фрагментов кода, схем, графиков, диаграмм и др.
+        Элемент <code>figcaption</code> содержит описание для элемента <code>figure</code>. Он должен быть первым или последним элементом в группе.</p>
+
+        <div class="image-container">
+            <h3>Элемент <code>figure</code> и <code>figcaption</code></h3>
+            <figure>
+                <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/redcat.jpg" alt="Изображение с подписью">
+                <figcaption>Подпись к изображению с красным котом</figcaption>
+            </figure>
+            <p><strong>Описание:</strong> Элемент <code>figure</code> используется для группировки изображения и его подписи, представленной элементом <code>figcaption</code>.  Используется `redcat.jpg`.</p>
+        </div>
+
+        <h2>Элемент <code>picture</code></h2>
+        <p>
+        HTML-элемент <code>picture</code> служит контейнером для одного или более элементов
+        <code>source</code> и одного элемента <code>img</code> для обеспечения оптимальной версии изображения
+        для различных размеров экрана. Браузер рассмотрит каждый из дочерних элементов  <code>source</code>
+        и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов <code>source</code>
+        найдено не будет, то будет выбран файл, указанный  атрибутом  <code>src</code> элемента <code>img</code>.
+        Затем выбранное изображение отображается в пространстве, занятом элементом <code>img</code>.
+        </p>
+
+        <div class="image-container">
+            <h3>Элемент <code>picture</code></h3>
+            <picture>
+                <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom_portrait.jpg">
+                <source media="(max-width: 1200px)" srcset="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom.jpg">
+                <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/mushroom_landscape.jpg" alt="Изображение для больших экранов">
+            </picture>
+            <p><strong>Описание:</strong> Элемент <code>picture</code> позволяет предоставлять разные изображения в зависимости от медиа-запросов. В данном случае, для экранов шириной до 600px будет использоваться `mushroom_portrait.jpg`, для экранов до 1200px - `mushroom.jpg`, а для остальных случаев - `mushroom_landscape.jpg`.</p>
+        </div>
+
+        <div class="image-container">
+            <h3>Анимация с <code>globus.gif</code> и <code>light.gif</code></h3>
+            <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/globus.gif" alt="Анимированный глобус">
+            <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/light.gif" alt="Анимированный свет">
+            <p><strong>Описание:</strong> Данный пример демонстрирует использование анимированных GIF-изображений.</p>
+        </div>
+
+        <div class="image-container">
+            <h3>Векторная графика: <code>html5-logo.svg</code></h3>
+            <img src="https://raw.githubusercontent.com/VoloshinVadim/VoloshinVadim.github.io/main/lab1/image/html5-logo.svg" alt="Логотип HTML5">
+            <p><strong>Описание:</strong> Демонстрация использования векторного SVG-изображения.  SVG отлично масштабируются без потери качества.</p>
+        </div>
+
+    </section>
 </body>
 </html>
